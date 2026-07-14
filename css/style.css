@@ -16,3 +16,9 @@ overflow:hidden;
 
 font-family:Arial, Helvetica, sans-serif;
 }
+
+.scene{
+
+perspective:1800px;
+
+}
