@@ -1,32 +1,31 @@
-const jewel = document.querySelector(".jewel-case");
-const lid = document.querySelector(".lid");
+const jewel=document.querySelector(".jewel-case");
 
-let open = false;
+const lid=document.querySelector(".lid");
+
+let abierta=false;
 
 document.addEventListener("mousemove",(e)=>{
+
+if(abierta)return;
 
 const x=(window.innerWidth/2-e.clientX)/35;
 
 const y=(window.innerHeight/2-e.clientY)/35;
-
-if(!open){
 
 jewel.style.transform=
 
 `rotateX(${y}deg)
  rotateY(${-x}deg)`;
 
-}
-
 });
 
-jewel.addEventListener("click",()=>{
+jewel.onclick=()=>{
 
-open=!open;
+abierta=!abierta;
 
-if(open){
+if(abierta){
 
-lid.style.transform="rotateY(-120deg)";
+lid.style.transform="rotateY(-135deg)";
 
 }else{
 
@@ -34,4 +33,4 @@ lid.style.transform="rotateY(0deg)";
 
 }
 
-});
+};
