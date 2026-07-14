@@ -1,26 +1,20 @@
 body{
 
+margin:0;
+
 display:flex;
 
 justify-content:center;
 
 align-items:center;
 
-background:
+height:100vh;
 
-linear-gradient(
+overflow:hidden;
 
-180deg,
-
-#ffffff,
-
-#f5f5f2
-
-);
+background:#f7f7f3;
 
 }
-
-/* escritorio */
 
 .desk{
 
@@ -34,16 +28,16 @@ justify-content:center;
 
 align-items:center;
 
-background-image:
+background:
 
 radial-gradient(
 
-rgba(0,0,0,.02) 1px,
+circle at center,
 
-transparent 1px
+#ffffff,
+
+#efefeb
 
 );
-
-background-size:16px 16px;
 
 }
