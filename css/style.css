@@ -84,9 +84,11 @@ object-fit:cover;
 }
 
 .disc{
-
+  
 position:absolute;
 
+overflow:hidden;
+  
 left:50%;
 
 top:50%;
@@ -129,21 +131,33 @@ content:"";
 
 position:absolute;
 
-left:50%;
-
-top:50%;
-
-width:60px;
-
-height:60px;
-
-margin-left:-30px;
-
-margin-top:-30px;
+inset:0;
 
 border-radius:50%;
 
-background:white;
+background:
+
+conic-gradient(
+
+transparent,
+
+rgba(255,0,255,.12),
+
+transparent,
+
+rgba(0,255,255,.15),
+
+transparent,
+
+rgba(255,255,0,.10),
+
+transparent
+
+);
+
+animation:
+
+rainbow 10s linear infinite;
 
 }
 
@@ -300,5 +314,53 @@ translateX(75px);
 transform:
 
 translateX(180px);
+
+}
+
+.outside{
+
+animation:
+
+spin 5s linear infinite;
+
+}
+
+@keyframes spin{
+
+from{
+
+transform:
+
+translateX(180px)
+
+rotate(0deg);
+
+}
+
+to{
+
+transform:
+
+translateX(180px)
+
+rotate(360deg);
+
+}
+
+}
+
+@keyframes rainbow{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
 
 }
