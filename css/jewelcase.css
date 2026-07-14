@@ -1,5 +1,11 @@
 .jewel-case{
 
+overflow:visible;
+
+position:relative;
+
+perspective:1800px;  
+
 border-right:8px solid rgba(210,210,210,.6);
 
 border-bottom:8px solid rgba(210,210,210,.35);
