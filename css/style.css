@@ -48,7 +48,8 @@ height:360px;
 
 transform-style:preserve-3d;
 
-transition:1s;
+transition:
+transform .15s linear;
 
 }
 
@@ -133,6 +134,16 @@ box-shadow:
 
 0 0 30px rgba(255,255,255,.8);
 
+border:
+
+1px solid rgba(255,255,255,.35);
+
+box-shadow:
+
+0 0 35px rgba(255,255,255,.75),
+
+0 12px 25px rgba(0,0,0,.18);
+
 }
 
 .disc::before{
@@ -149,17 +160,23 @@ background:
 
 conic-gradient(
 
-transparent,
-
-rgba(255,0,255,.12),
+from 0deg,
 
 transparent,
 
-rgba(0,255,255,.15),
+rgba(255,0,255,.16),
 
 transparent,
 
-rgba(255,255,0,.10),
+rgba(0,255,255,.18),
+
+transparent,
+
+rgba(255,255,0,.14),
+
+transparent,
+
+rgba(0,255,120,.12),
 
 transparent
 
@@ -442,5 +459,33 @@ linear-gradient(
 border-radius:10px;
 
 z-index:-1;
+
+}
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+.scene{
+
+animation:floating 5s ease-in-out infinite;
 
 }
