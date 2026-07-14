@@ -1,0 +1,36 @@
+body{
+
+background:#f7f7f3;
+
+width:100vw;
+height:100vh;
+
+overflow:hidden;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.desk{
+
+width:100vw;
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+radial-gradient(
+circle at center,
+#ffffff,
+#f1f1ee
+);
+
+position:relative;
+
+}
