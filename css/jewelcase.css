@@ -585,3 +585,22 @@ transform:rotate(360deg);
 }
 
 }
+
+.back-cover{
+
+position:absolute;
+
+inset:18px;
+
+background:#111;
+
+background-size:cover;
+
+background-position:center;
+
+opacity:0;
+
+pointer-events:none;
+
+}
+
