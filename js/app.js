@@ -1,14 +1,17 @@
-const jewelCase = document.getElementById("jewelCase");
+const jewel = document.querySelector(".jewel-case");
 
 document.addEventListener("mousemove",(e)=>{
 
-const x =
-(e.clientX/window.innerWidth -0.5)*20;
+const x=(window.innerWidth/2-e.clientX)/35;
 
-const y =
-(e.clientY/window.innerHeight -0.5)*20;
+const y=(window.innerHeight/2-e.clientY)/35;
 
-jewelCase.style.transform =
-`rotateY(${x}deg) rotateX(${-y}deg)`;
+jewel.style.transform=
+
+`rotateX(${y}deg)
+
+rotateY(${-x}deg)
+
+`;
 
 });
