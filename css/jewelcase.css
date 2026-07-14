@@ -140,3 +140,26 @@ margin-top:10px;
 font-size:2rem;
 
 }
+
+@keyframes floatCase{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.scene{
+
+animation:
+floatCase 6s ease-in-out infinite;
+
+}
