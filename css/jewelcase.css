@@ -50,6 +50,13 @@ inset 0 0 15px rgba(255,255,255,.8),
 
 .lid{
 
+box-shadow:
+
+0 0 25px rgba(255,255,255,.45),
+
+10px 0 25px rgba(0,0,0,.08);
+
+
 position:absolute;
 
 width:100%;
