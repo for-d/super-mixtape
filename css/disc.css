@@ -130,3 +130,31 @@ box-shadow:
 inset 0 0 10px rgba(255,255,255,.9);
 
 }
+
+.hub-lock{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:34px;
+
+height:34px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+white,
+
+#bdbdbd
+
+);
+
+}
