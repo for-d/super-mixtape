@@ -144,6 +144,10 @@ box-shadow:
 
 0 12px 25px rgba(0,0,0,.18);
 
+cursor:pointer;
+
+user-select:none;
+
 }
 
 .disc::before{
@@ -487,5 +491,41 @@ transform:translateY(0px);
 .scene{
 
 animation:floating 5s ease-in-out infinite;
+
+}
+
+.case::after{
+
+content:"";
+
+position:absolute;
+
+left:-10px;
+
+top:0;
+
+width:10px;
+
+height:100%;
+
+border-radius:4px 0 0 4px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#bdbdbd,
+
+#f0f0f0,
+
+#a9a9a9
+
+);
+
+box-shadow:
+
+inset 0 0 5px rgba(255,255,255,.6);
 
 }
