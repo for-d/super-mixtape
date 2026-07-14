@@ -1,61 +1,56 @@
-const caja=document.querySelector(".case");
+const caja = document.querySelector(".case");
+const disco = document.querySelector(".disc");
 
-const disco=document.querySelector(".disc");
+let abierta = false;
+let discoFuera = false;
 
-let abierta=false;
+// Abrir / cerrar caja
+caja.addEventListener("click", (e) => {
 
-let discoFuera=false;
+    if (e.target === disco) return;
 
-caja.addEventListener("click",(e)=>{
+    abierta = !abierta;
 
-if(e.target===disco)return;
+    caja.classList.toggle("open", abierta);
 
-abierta=!abierta;
-
-if(abierta){
-
-caja.classList.add("open");
-
-}else{
-
-caja.classList.remove("open");
-
-disco.classList.remove("outside");
-
-discoFuera=false;
-
-}
+    if (!abierta) {
+        discoFuera = false;
+        disco.classList.remove("outside");
+    }
 
 });
 
-disco.addEventListener("click",(e)=>{
+// Sacar / guardar CD
+disco.addEventListener("click", (e) => {
 
-e.stopPropagation();
+    e.stopPropagation();
 
-if(!abierta)return;
+    if (!abierta) return;
 
-discoFuera=!discoFuera;
+    discoFuera = !discoFuera;
 
-if(discoFuera){
-
-disco.classList.add("outside");
-
-}else{
-
-disco.classList.remove("outside");
-
-}
+    disco.classList.toggle("outside", discoFuera);
 
 });
 
-document.addEventListener("mousemove",(e)=>{
+// Movimiento 3D MUY suave
+document.addEventListener("mousemove", (e) => {
 
-const x=(e.clientX/window.innerWidth-.5)*12;
+    const x = (e.clientX / window.innerWidth - 0.5) * 18;
+    const y = (e.clientY / window.innerHeight - 0.5) * -18;
 
-const y=(e.clientY/window.innerHeight-.5)*-12;
+    caja.style.transform =
+        `rotateY(${x}deg) rotateX(${y}deg)`;
 
-caja.style.transform=
+    // El CD se mueve un poquito independiente
+    const dx = x * 0.35;
+    const dy = y * 0.35;
 
-`rotateY(${x}deg) rotateX(${y}deg)`;
+    if (!discoFuera) {
+
+        disco.style.transform =
+            `translate(${dx}px, ${dy}px)`;
+
+    }
 
 });
