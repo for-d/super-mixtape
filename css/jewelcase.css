@@ -52,6 +52,10 @@ inset 0 0 15px rgba(255,255,255,.8),
 
 .lid{
 
+border-left:
+
+4px solid rgba(255,255,255,.75);
+
 transform-style:preserve-3d;
 
 .lid::before{
@@ -477,6 +481,26 @@ left:140%;
 }
 
 .spine{
+
+.spine::after{
+
+content:"";
+
+position:absolute;
+
+left:3px;
+
+top:12px;
+
+bottom:12px;
+
+width:3px;
+
+background:
+
+rgba(255,255,255,.55);
+
+}
 
 position:absolute;
 
