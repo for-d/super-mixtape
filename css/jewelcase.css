@@ -18,19 +18,25 @@ perspective:1800px;
 
 position:absolute;
 
-width:100%;
+inset:0;
 
-height:100%;
+background:#d6d6d6;
 
 border-radius:10px;
 
-background:#d5d5d5;
+overflow:hidden;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
 
 box-shadow:
 
-0 30px 70px rgba(0,0,0,.25);
+inset 0 0 15px rgba(255,255,255,.8),
 
-overflow:hidden;
+0 30px 70px rgba(0,0,0,.25);
 
 }
 
