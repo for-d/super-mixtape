@@ -1,36 +1,49 @@
 body{
 
-background:#f7f7f3;
-
-width:100vw;
-height:100vh;
-
-overflow:hidden;
-
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
-font-family:Arial, Helvetica, sans-serif;
+background:
+
+linear-gradient(
+
+180deg,
+
+#ffffff,
+
+#f5f5f2
+
+);
 
 }
+
+/* escritorio */
 
 .desk{
 
 width:100vw;
+
 height:100vh;
 
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
-background:
+background-image:
+
 radial-gradient(
-circle at center,
-#ffffff,
-#f1f1ee
+
+rgba(0,0,0,.02) 1px,
+
+transparent 1px
+
 );
 
-position:relative;
+background-size:16px 16px;
 
 }
